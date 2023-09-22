@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <titletitle</title>
+</head>
+<body>
+    <p>This is the first paragraph.</p>
+    <p>This is the second paragraph.</p>
+    <p>This is the third paragraph.</p>
+    <button id="button">Click me to change paragraphs!</button>
+
+    <script>
+        function changeParagraphs() {
+            var paragraphs = document.getElementsByTagName("p");
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].innerHTML = "Paragraph " + (i + 1);
+                paragraphs[i].classList.add("modified");
+            }
+        }
+
+        document.getElementById("button").addEventListener("click", changeParagraphs);
+    </script>
+</body>
+</html>

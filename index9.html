@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+    <h1 id="header">Welcome to My Page</h1>
+    <p id="paragraph">This is a simple HTML page.</p>
+    <button id="button">Click me!</button>
+
+    <script>
+        function changeText() {
+            var paragraphElement = document.getElementById("paragraph");
+
+            if (paragraphElement) {
+                paragraphElement.innerHTML = "Text changed by JavaScript!";
+            } else {
+                console.log("Element not found.");
+            }
+        }
+
+        document.getElementById("button").addEventListener("click", changeText);
+    </script>
+</body>
+</html>

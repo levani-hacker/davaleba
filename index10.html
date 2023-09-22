@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+    <h2 class="highlight">Element 1</h2>
+    <p class="highlight">This is the first element with the 'highlight' class.</p>
+    <p>This is a paragraph without the 'highlight' class.</p>
+    <p class="highlight">This is the second element with the 'highlight' class.</p>
+    <button id="button">Click me to highlight!</button>
+
+    <script>
+        function changeTextAndStyle() {
+            var elements = document.getElementsByClassName("highlight");
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].innerHTML = "Text changed by JavaScript!";
+                elements[i].style.backgroundColor = "yellow";
+            }
+        }
+
+        document.getElementById("button").addEventListener("click", changeTextAndStyle);
+    </script>
+</body>
+</html>
